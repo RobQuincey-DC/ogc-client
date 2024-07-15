@@ -54,6 +54,7 @@ describe('WMS capabilities', () => {
           'EPSG:4326': ['-180', '-90', '180', '90'],
         },
         name: 'GEOSERVICES_GEOLOGIE',
+        queryable: false,
         styles: [
           {
             legendUrl: expect.stringContaining(
@@ -77,6 +78,7 @@ describe('WMS capabilities', () => {
               'EPSG:4326': ['-180', '-90', '180', '90'],
             },
             name: 'GEOLOGIE',
+            queryable: false,
             styles,
             title: 'Cartes géologiques',
             children: [
@@ -118,6 +120,7 @@ describe('WMS capabilities', () => {
                   'EPSG:4326': ['-5.86764', '41.1701', '11.0789', '51.1419'],
                 },
                 name: 'SCAN_F_GEOL1M',
+                queryable: false,
                 styles: [
                   {
                     legendUrl:
@@ -168,6 +171,7 @@ describe('WMS capabilities', () => {
                   'EPSG:4326': ['-6.20495', '41.9671', '12.2874', '51.2917'],
                 },
                 name: 'SCAN_F_GEOL250',
+                queryable: false,
                 styles,
                 title: 'Carte géologique image de la France au 1/250000',
               },
@@ -205,6 +209,7 @@ describe('WMS capabilities', () => {
                   'EPSG:4326': ['-12.2064', '40.681', '11.894', '52.1672'],
                 },
                 name: 'SCAN_D_GEOL50',
+                queryable: false,
                 styles,
                 title: 'Carte géologique image de la France au 1/50 000e',
               },
@@ -230,6 +235,7 @@ describe('WMS capabilities', () => {
                   'EPSG:4326': ['-180', '-90', '180', '90'],
                 },
                 name: 'INHERIT_BBOX',
+                queryable: false,
                 styles: [
                   {
                     name: 'default',
