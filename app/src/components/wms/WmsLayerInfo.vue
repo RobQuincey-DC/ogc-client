@@ -64,6 +64,7 @@ export default {
           this.layer.attribution.title && {
             attribution: this.layer.attribution.title,
           }),
+        ...(this.layer.queryable && { queryable: this.layer.queryable }),
       };
     },
     fullMapSrc() {
