@@ -132,7 +132,7 @@ function parseLayer(
     Object.keys(boundingBoxes).length > 0 || inheritedBoundingBoxes === null
       ? boundingBoxes
       : inheritedBoundingBoxes;
-  const queryable = layerEl.attributes.queryable === "1" ? true : false;
+  const queryable = layerEl.attributes.queryable === '1' ? true : false;
   const children = findChildrenElement(layerEl, 'Layer').map((layer) =>
     parseLayer(layer, version, availableCrs, styles, attribution, boundingBoxes)
   );
