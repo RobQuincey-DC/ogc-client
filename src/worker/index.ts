@@ -103,8 +103,12 @@ export function parseWmtsCapabilities(capabilitiesUrl: string): Promise<{
   });
 }
 
-setFetchOptionsUpdateCallback((options) => {
-  const worker = getWorkerInstance();
-  if (!worker) return;
-  sendTaskRequest('updateFetchOptions', getWorkerInstance(), { options });
-});
+export function initSetFetchOptionsUpdateCallback(){
+  setFetchOptionsUpdateCallback((options) => {
+    const worker = getWorkerInstance();
+    if (!worker) return;
+    sendTaskRequest('updateFetchOptions', getWorkerInstance(), { options });
+  });
+}
+
+initSetFetchOptionsUpdateCallback();
